@@ -1,6 +1,6 @@
 package com.colinarms.queue;
 
-public class Queue {
+public class BoundedQueue {
 	int size;
 	int numInts;
 	int start;
@@ -8,7 +8,7 @@ public class Queue {
 	
 	int[] array;
 	
-	public Queue(int size) {
+	public BoundedQueue(int size) {
 		this.size = size;
 		array 	= new int[size];
 		start 	= 0;
