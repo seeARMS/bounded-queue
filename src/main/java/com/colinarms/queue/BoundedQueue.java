@@ -18,7 +18,7 @@ public class BoundedQueue implements Queue {
 
 	public void enqueue(int num) throws Exception {
 		if (numInts == size)
-			throw new Exception();
+			throw new IllegalStateException("Queue is full!");
 
 		array[start] = num;
 
@@ -29,7 +29,7 @@ public class BoundedQueue implements Queue {
 
 	public int dequeue() throws Exception {
 		if (numInts == 0)
-			throw new Exception();
+			throw new IllegalStateException("Queue is empty!");
 
 		int retrievedNum = array[end];
 		array[end] = 0;
